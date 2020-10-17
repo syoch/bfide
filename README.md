@@ -1,2 +1,2 @@
 # bfide
-a Brainfuck ide
+a Brainfuck ide on web browser

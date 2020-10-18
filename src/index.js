@@ -37,12 +37,14 @@ function executeBf(src) {
                 if(memory[pointer] == 256){
                     memory[pointer]=0
                 }
+                memorys[pointer].innerHTML = memory[pointer];
                 break;
             case "-":
                 memory[pointer] -= 1;
                 if(memory[pointer] == -1){
                     memory[pointer]=0
                 }
+                memorys[pointer].innerHTML = memory[pointer];
                 break;
             case "<":
                 pointer -= 1;

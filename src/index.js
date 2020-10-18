@@ -134,6 +134,7 @@ $(function () {
     $("#btn_run").on("click", () => {
         for (let i = 0; i < memory.length; i++) {
             memory[i] = 0;
+            memorys[i].innerHTML = "0";
         }
         pointer = 0;
         executeBf($("#editor").val());

@@ -118,7 +118,7 @@ async function executeBf(src) {
                 let a = String.fromCharCode(memory[pointer])
                 Logging(a)
                 break;
-            default: console.log(ch); break;
+            default: break;
         }
         await sleep($("#delay").val());
     }

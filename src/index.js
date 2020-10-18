@@ -1,6 +1,15 @@
 
 /// <reference path="../typings/tjq.d.ts" />
 
+
+/**
+ * Logging to Brainfuck output
+ * @param {String} str Logging string
+ */
+function Logging(str) {
+    console.log(str);
+}
+
 /**
  * execute Brain f**k source
  * @param {String} _src Execute source

@@ -45,6 +45,7 @@
 }
 .action > *{
     float:left;
+    color:white;
     height:30px;
     width: calc(30px * var(--size))
 }

@@ -38,7 +38,7 @@ function sleep(time) {
  * execute Brain f**k source
  * @param {String} _src Execute source
  */
-function executeBf(src) {
+async function executeBf(src) {
     for (let i = 0; i < src.length; i++) {
         const ch = src[i];
         switch (ch) {
@@ -97,6 +97,7 @@ function executeBf(src) {
                 break;
             default: console.log(ch); break;
         }
+        await sleep(100);
     }
 }
 

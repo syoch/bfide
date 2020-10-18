@@ -2,7 +2,13 @@
 /// <reference path="../typings/tjq.d.ts" />
 
 let memorys;
-let memory = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let memory = [
+    0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 
+];
 let pointer = 0;
 
 /**

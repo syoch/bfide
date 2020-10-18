@@ -1,0 +1,8 @@
+.memory{
+    height:30px;
+    width:100vw;
+    background-color: #a9a9a9;
+    position: fixed;
+    top:0px;
+    left:0px;
+}

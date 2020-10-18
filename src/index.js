@@ -49,6 +49,12 @@ function executeBf(src) {
                 Logging("Unmatched bracket on" + i + "\n");
                 throw "";
             case ",":
+                // TODO: implement
+                break;
+            case ".":
+                let a = String.fromCharCode(memory[pointer])
+                Logging(a)
+                break;
             default: console.log(ch); break;
         }
     }

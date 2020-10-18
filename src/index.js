@@ -22,15 +22,27 @@ function executeBf(src) {
         switch (ch) {
             case "+":
                 memory[pointer] += 1;
+                if(memory[pointer] == 256){
+                    memory[pointer]=0
+                }
                 break;
             case "-":
                 memory[pointer] -= 1;
+                if(memory[pointer] == -1){
+                    memory[pointer]=0
+                }
                 break;
             case "<":
                 pointer -= 1;
+                if(pointer == -1){
+                    pointer=0;
+                }
                 break;
             case ">":
-                pointer += 1
+                pointer += 1;
+                if(pointer == 20){
+                    pointer=19;
+                }
                 break;
             case "[":
                 let start = i;

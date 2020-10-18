@@ -101,7 +101,7 @@ async function executeBf(src) {
                 break;
             default: console.log(ch); break;
         }
-        await sleep(100);
+        await sleep($("#delay").val());
     }
 }
 

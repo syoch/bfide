@@ -3,7 +3,8 @@
 
 $(function () {
 
-    let elems = $(".action").children();
-    elems.css("--size", elems.attr("size"));
+    $("#btn_run").on("click", () => {
+        console.log("run", $("#editor").val());
+    })
 
 })

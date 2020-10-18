@@ -69,6 +69,7 @@ $(function () {
     setTimeout(() => {
         let array = "Brainfuck Ide by syoch\n".split("");
         let i = 0;
+        Logging(">>> ");
         let interval = setInterval(() => {
              Logging(array[i])
             i++;

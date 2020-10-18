@@ -58,3 +58,13 @@ button{
 button:hover{
     border:#c0c0c0 1px solid;
 }
+
+.log{
+    position:fixed;
+    top:60px;
+    right:0px;
+    height:calc(100% - 60px);
+    width:20%;
+    background: black;
+    border-top:white 1px solid;
+}

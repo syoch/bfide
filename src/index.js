@@ -66,6 +66,17 @@ $(function () {
         const elem = $(elems[i]);
         elem.css("--size", elem.attr("size"));
     }
+    setTimeout(() => {
+        let array = "Brainfuck Ide by syoch\n".split("");
+        let i = 0;
+        let interval = setInterval(() => {
+             Logging(array[i])
+            i++;
+            if (array[i] == undefined) {
+                clearInterval(interval);
+            }
+        }, 10);
+    }, 0);
 
     $("#btn_run").on("click", () => {
         console.log("run", $("#editor").val());

@@ -1,6 +1,8 @@
 
 /// <reference path="../typings/tjq.d.ts" />
 
+let memory = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let pointer = 0;
 
 /**
  * Logging to Brainfuck output

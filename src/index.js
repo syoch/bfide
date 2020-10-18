@@ -118,12 +118,13 @@ async function executeBf(src) {
 }
 
 $(function () {
-    // smart style
+    // init html
     let elems = $(".action").children();
     for (let i = 0; i < elems.length; i++) {
         const elem = $(elems[i]);
         elem.css("--size", elem.attr("size"));
     }
+    setMemoryCursor(0)
     // show memory all 0
     memorys = $(".memory").children();
     for (let i = 0; i < memory.length; i++) {

@@ -21,6 +21,12 @@ function executeBf(src) {
         const ch = src[i];
         switch (ch) {
             case "+":
+                memory[pointer] += 1;
+                break;
+            case "-":
+                memory[pointer] -= 1;
+                break;
+            case "<":
             default: console.log(ch); break;
         }
     }

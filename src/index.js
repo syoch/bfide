@@ -36,7 +36,11 @@ Logging.space = 0;
  */
 function sleep(time) {
     return new Promise((resolve, reject) => {
-        setTimeout(resolve, time);
+        if(time==0){
+            setZeroTimeout(resolve,0);
+        }else{
+            setTimeout(resolve, time);
+        }
     });
 }
 
@@ -126,8 +130,7 @@ async function executeBf(src) {
                 break;
             default: break;
         }
-        if($("#delay").val()!=0)
-            await sleep($("#delay").val());
+        await sleep($("#delay").val());
     }
 }
 

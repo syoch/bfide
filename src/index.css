@@ -51,3 +51,6 @@
     border-radius: 5px;
     color:white
 }
+.action > button:hover{
+    border:#c0c0c0 1px solid;
+}

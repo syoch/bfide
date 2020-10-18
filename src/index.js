@@ -84,7 +84,7 @@ async function executeBf(src) {
 
                 let loop = src.slice(start + 1, end);
                 while (memory[pointer] != 0) {
-                    executeBf(loop);
+                    await executeBf(loop);
                 }
 
                 i = end;

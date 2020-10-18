@@ -45,31 +45,35 @@ async function executeBf(src) {
             case "+":
                 memory[pointer] += 1;
                 if (memory[pointer] == 256) {
-                    Logging(pointer + "greater 256(overflow)\n");
-                    throw pointer + "greater 256(overflow)\n";
+                    let msg=pointer + "greater 256(overflow)\n";
+                    Logging(msg);
+                    throw msg;
                 }
                 memorys[pointer].innerHTML = memory[pointer];
                 break;
             case "-":
                 memory[pointer] -= 1;
                 if (memory[pointer] < 0) {
-                    Logging(pointer + "less 0(underflow)\n");
-                    throw pointer + "less 0(underflow)\n";
+                    let msg=pointer + "less 0(underflow)\n";
+                    Logging(msg);
+                    throw msg;
                 }
                 memorys[pointer].innerHTML = memory[pointer];
                 break;
             case "<":
                 pointer -= 1;
                 if (pointer == -1) {
-                    Logging("pointer less 0(underflow)\n");
-                    throw "pointer less 0(underflow)\n";
+                    let msg="pointer less 0(underflow)\n";
+                    Logging(msg);
+                    throw msg;
                 }
                 break;
             case ">":
                 pointer += 1;
                 if (pointer > 19) {
-                    Logging("pointer greater 19(underflow)\n");
-                    throw "pointer greater 19(underflow)\n";
+                    let msg="pointer greater 19(underflow)\n";
+                    Logging(msg);
+                    throw msg;
                 }
                 break;
             case "[":

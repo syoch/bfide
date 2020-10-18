@@ -7,6 +7,9 @@
  */
 function executeBf(src) {
     for (let i = 0; i < src.length; i++) {
+    }
+}
+
 $(function () {
     let elems = $(".action").children();
     for (let i = 0; i < elems.length; i++) {

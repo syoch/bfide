@@ -91,8 +91,19 @@ async function executeBf(src) {
             case "[":
                 let start = i;
                 let end = i;
-                while (src[end] != "]" && src[end] != undefined)
-                    end += 1;
+                let depth=1;
+                while (depth!=0){
+                    end+=1;
+                    if(src[end]=="]"){
+                        depth-=1;
+                    }
+                    if(src[end]=="["){
+                        depth+=1;
+                    }
+                    if(src[end]==undefined){
+                        break;
+                    }
+                }
 
                 let loop = src.slice(start + 1, end);
                 while (memory[pointer] != 0) {

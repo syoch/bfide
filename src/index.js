@@ -105,6 +105,9 @@ $(function () {
     }, 0);
     // html handler
     $("#btn_run").on("click", () => {
+        for (let i = 0; i < memory.length; i++) {
+            memory[i]=0;
+        }
         executeBf($("#editor").val());
     })
 

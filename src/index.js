@@ -33,6 +33,22 @@ function executeBf(src) {
                 pointer += 1
                 break;
             case "[":
+                let start = i;
+                let end = i;
+                while (src[end] != "]" && src[end] != undefined)
+                    end += 1;
+
+                let loop = src.slice(start + 1, end);
+                while (memory[pointer] != 0) {
+                    executeBf(loop);
+                }
+
+                i = end;
+                break;
+            case "]":
+                Logging("Unmatched bracket on" + i + "\n");
+                throw "";
+            case ",":
             default: console.log(ch); break;
         }
     }

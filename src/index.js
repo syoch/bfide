@@ -55,18 +55,14 @@ async function executeBf(src) {
             case "+":
                 memory[pointer] += 1;
                 if (memory[pointer] == 256) {
-                    let msg = pointer + "greater 256(overflow)\n";
-                    Logging(msg);
-                    throw msg;
+                    memory[pointer]=0;
                 }
                 memorys[pointer].innerHTML = memory[pointer];
                 break;
             case "-":
                 memory[pointer] -= 1;
                 if (memory[pointer] < 0) {
-                    let msg = pointer + "less 0(underflow)\n";
-                    Logging(msg);
-                    throw msg;
+                    memory[pointer]=255;
                 }
                 memorys[pointer].innerHTML = memory[pointer];
                 break;

@@ -6,7 +6,10 @@
     top:0px;
     left:0px;
 }
-
+*,*::after,*::before{
+    margin:0px;
+    padding:0px;
+}
 .memory > memory{
     display:inline-block;
     border:1px solid #000000;

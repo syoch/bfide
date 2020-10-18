@@ -43,14 +43,13 @@
     z-index: 5;
     background-color: black;
 }
-.action > button{
+button{
     height:30px;
-    width:120px;
     background:black;
     border:#808080 1px solid;
     border-radius: 5px;
     color:white
 }
-.action > button:hover{
+button:hover{
     border:#c0c0c0 1px solid;
 }

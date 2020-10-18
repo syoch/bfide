@@ -27,6 +27,12 @@ function executeBf(src) {
                 memory[pointer] -= 1;
                 break;
             case "<":
+                pointer -= 1;
+                break;
+            case ">":
+                pointer += 1
+                break;
+            case "[":
             default: console.log(ch); break;
         }
     }

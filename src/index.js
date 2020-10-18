@@ -82,7 +82,7 @@ $(function () {
     }, 0);
     // html handler
     $("#btn_run").on("click", () => {
-        console.log("run", $("#editor").val());
+        executeBf($("#editor").val());
     })
 
 })

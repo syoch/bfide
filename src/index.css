@@ -25,3 +25,12 @@
     clear: both;
 }
 #editor{
+    position: fixed;
+    top:30px;
+    left:0px;
+    width:80%;
+    height:calc(100% - 30px);
+    resize: none;
+    background-color: #002b36;
+    color:white;
+}

@@ -43,6 +43,11 @@
     z-index: 5;
     background-color: black;
 }
+.action > *{
+    float:left;
+    height:30px;
+    width: calc(30px * var(--size))
+}
 button{
     height:30px;
     background:black;

@@ -168,6 +168,13 @@ $(function () {
         }
         pointer = 0;
         executeBf($("#editor").val());
+    });
+    $("#btn_add").on("click",()=>{
+        // add memory
+        // update #current_memsize
     })
-
+    $("#btn_sub").on("click",()=>{
+        // sub memory
+        // update #current_memsize
+    })
 })

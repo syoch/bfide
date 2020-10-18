@@ -29,8 +29,8 @@ Logging.space = 0;
  * @param {Number} time delay time
  */
 function sleep(time) {
-    return new Promise((resolve,reject)=>{
-        setTimeout(resolve,time);
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, time);
     });
 }
 
@@ -45,7 +45,7 @@ async function executeBf(src) {
             case "+":
                 memory[pointer] += 1;
                 if (memory[pointer] == 256) {
-                    let msg=pointer + "greater 256(overflow)\n";
+                    let msg = pointer + "greater 256(overflow)\n";
                     Logging(msg);
                     throw msg;
                 }
@@ -54,7 +54,7 @@ async function executeBf(src) {
             case "-":
                 memory[pointer] -= 1;
                 if (memory[pointer] < 0) {
-                    let msg=pointer + "less 0(underflow)\n";
+                    let msg = pointer + "less 0(underflow)\n";
                     Logging(msg);
                     throw msg;
                 }
@@ -63,7 +63,7 @@ async function executeBf(src) {
             case "<":
                 pointer -= 1;
                 if (pointer == -1) {
-                    let msg="pointer less 0(underflow)\n";
+                    let msg = "pointer less 0(underflow)\n";
                     Logging(msg);
                     throw msg;
                 }
@@ -71,7 +71,7 @@ async function executeBf(src) {
             case ">":
                 pointer += 1;
                 if (pointer > 19) {
-                    let msg="pointer greater 19(underflow)\n";
+                    let msg = "pointer greater 19(underflow)\n";
                     Logging(msg);
                     throw msg;
                 }

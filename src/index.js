@@ -9,8 +9,19 @@ let pointer = 0;
  * @param {String} str Logging string
  */
 function Logging(str) {
-    $(".log")[0].innerText+=str;
+    if(Logging.space==1){
+        $(".log")[0].innerText+=" "+str;
+    }else{
+        $(".log")[0].innerText+=str;
+    }
+
+    if(str==" "){
+        Logging.space=1;
+    }else{
+        Logging.space=0;
+    }
 }
+Logging.space=0;
 
 /**
  * execute Brain f**k source

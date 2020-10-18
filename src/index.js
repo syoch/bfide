@@ -9,7 +9,7 @@ let pointer = 0;
  * @param {String} str Logging string
  */
 function Logging(str) {
-    $(".log")[0].innerHTML+=str;
+    $(".log")[0].innerText+=str;
 }
 
 /**

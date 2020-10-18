@@ -35,6 +35,16 @@ function sleep(time) {
 }
 
 /**
+ * set memory cursor position
+ * @param {Number} pos new position
+ */
+function setMemoryCursor(pos){
+    $(".memory").children().css("background-color","transparent");
+    $(".memory").children()[pos].style.backgroundColor="white"
+}
+setMemoryCursor.pos=0;
+
+/**
  * execute Brain f**k source
  * @param {String} _src Execute source
  */

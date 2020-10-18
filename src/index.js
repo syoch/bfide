@@ -61,11 +61,13 @@ function executeBf(src) {
 }
 
 $(function () {
+    // smart style
     let elems = $(".action").children();
     for (let i = 0; i < elems.length; i++) {
         const elem = $(elems[i]);
         elem.css("--size", elem.attr("size"));
     }
+    // load animation
     setTimeout(() => {
         let array = "Brainfuck Ide by syoch\n".split("");
         let i = 0;
@@ -78,7 +80,7 @@ $(function () {
             }
         }, 10);
     }, 0);
-
+    // html handler
     $("#btn_run").on("click", () => {
         console.log("run", $("#editor").val());
     })

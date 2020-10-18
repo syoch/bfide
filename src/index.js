@@ -18,6 +18,11 @@ function Logging(str) {
  */
 function executeBf(src) {
     for (let i = 0; i < src.length; i++) {
+        const ch = src[i];
+        switch (ch) {
+            case "+":
+            default: console.log(ch); break;
+        }
     }
 }
 

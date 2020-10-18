@@ -98,9 +98,9 @@ $(function () {
         elem.css("--size", elem.attr("size"));
     }
     // show memory all 0
-    memorys=$(".memory").children();
-    for(let i=0;i<memory.length;i++){
-        memorys[i].innerHTML="0";
+    memorys = $(".memory").children();
+    for (let i = 0; i < memory.length; i++) {
+        memorys[i].innerHTML = "0";
     }
     // load animation
     setTimeout(() => {
@@ -108,7 +108,7 @@ $(function () {
         let i = 0;
         Logging(">>> ");
         let interval = setInterval(() => {
-             Logging(array[i])
+            Logging(array[i])
             i++;
             if (array[i] == undefined) {
                 clearInterval(interval);
@@ -118,9 +118,9 @@ $(function () {
     // html handler
     $("#btn_run").on("click", () => {
         for (let i = 0; i < memory.length; i++) {
-            memory[i]=0;
+            memory[i] = 0;
         }
-        pointer=0;
+        pointer = 0;
         executeBf($("#editor").val());
     })
 

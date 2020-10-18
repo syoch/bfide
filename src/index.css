@@ -21,3 +21,7 @@
     text-align: right;
     line-height: 30px;
 }
+.memory::after{
+    clear: both;
+}
+#editor{

@@ -15,7 +15,7 @@ function Logging(str) {
         $(".log")[0].innerText+=str;
     }
 
-    if(str==" "){
+    if(str.endsWith(" ")){
         Logging.space=1;
     }else{
         Logging.space=0;

@@ -84,7 +84,7 @@ async function executeBf(src) {
             case ">":
                 pointer += 1;
                 setMemoryCursor(pointer);
-                if (pointer > 19) {
+                if (pointer > memory.length-1) {
                     let msg = "pointer greater 19(underflow)\n";
                     Logging(msg);
                     throw msg;

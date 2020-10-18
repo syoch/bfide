@@ -25,6 +25,16 @@ function Logging(str) {
 Logging.space = 0;
 
 /**
+ * sleep
+ * @param {Number} time delay time
+ */
+function sleep(time) {
+    return new Promise((resolve,reject)=>{
+        setTimeout(resolve,time);
+    });
+}
+
+/**
  * execute Brain f**k source
  * @param {String} _src Execute source
  */

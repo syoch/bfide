@@ -126,7 +126,8 @@ async function executeBf(src) {
                 break;
             default: break;
         }
-        await sleep($("#delay").val());
+        if($("#delay").val()!=0)
+            await sleep($("#delay").val());
     }
 }
 

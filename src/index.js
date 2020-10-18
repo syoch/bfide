@@ -1,6 +1,7 @@
 
 /// <reference path="../typings/tjq.d.ts" />
 
+let memorys;
 let memory = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let pointer = 0;
 
@@ -91,7 +92,7 @@ $(function () {
         elem.css("--size", elem.attr("size"));
     }
     // show memory all 0
-    let memorys=$(".memory").children();
+    memorys=$(".memory").children();
     for(let i=0;i<memory.length;i++){
         memorys[i].innerHTML="0";
     }

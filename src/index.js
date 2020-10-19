@@ -170,8 +170,11 @@ $(function () {
         executeBf($("#editor").val());
     });
     $("#btn_add").on("click",()=>{
-        // add memory
-        // update #current_memsize
+        let elem=$("<memory>").html("0");
+        memory.push(0);
+        $(".memory").append(elem);
+        memorys=memorys.add(elem);
+        $("#current_memsize").html(memory.length)
     })
     $("#btn_sub").on("click",()=>{
         // sub memory

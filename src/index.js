@@ -177,7 +177,9 @@ $(function () {
         $("#current_memsize").html(memory.length)
     })
     $("#btn_sub").on("click",()=>{
-        // sub memory
-        // update #current_memsize
+        memory.pop();
+        $(".memory").children().last().remove();
+        memorys=$(".memory").children();
+        $("#current_memsize").html(memory.length)
     })
 })

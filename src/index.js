@@ -3,11 +3,11 @@
 
 let memorys;
 let memory = [
-    0, 0, 0, 0, 0, 
-    0, 0, 0, 0, 0, 
-    0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0,
 ];
 let pointer = 0;
 
@@ -36,9 +36,9 @@ Logging.space = 0;
  */
 function sleep(time) {
     return new Promise((resolve, reject) => {
-        if(time==0){
-            setZeroTimeout(resolve,0);
-        }else{
+        if (time == 0) {
+            setZeroTimeout(resolve, 0);
+        } else {
             setTimeout(resolve, time);
         }
     });
@@ -48,11 +48,11 @@ function sleep(time) {
  * set memory cursor position
  * @param {Number} pos new position
  */
-function setMemoryCursor(pos){
-    $(".memory").children().css("background-color","transparent");
-    $(".memory").children()[pos].style.backgroundColor="white"
+function setMemoryCursor(pos) {
+    $(".memory").children().css("background-color", "transparent");
+    $(".memory").children()[pos].style.backgroundColor = "white"
 }
-setMemoryCursor.pos=0;
+setMemoryCursor.pos = 0;
 
 /**
  * execute Brain f**k source
@@ -65,14 +65,14 @@ async function executeBf(src) {
             case "+":
                 memory[pointer] += 1;
                 if (memory[pointer] == 256) {
-                    memory[pointer]=0;
+                    memory[pointer] = 0;
                 }
                 memorys[pointer].innerHTML = memory[pointer];
                 break;
             case "-":
                 memory[pointer] -= 1;
                 if (memory[pointer] < 0) {
-                    memory[pointer]=255;
+                    memory[pointer] = 255;
                 }
                 memorys[pointer].innerHTML = memory[pointer];
                 break;
@@ -88,7 +88,7 @@ async function executeBf(src) {
             case ">":
                 pointer += 1;
                 setMemoryCursor(pointer);
-                if (pointer > memory.length-1) {
+                if (pointer > memory.length - 1) {
                     let msg = "pointer greater 19(underflow)\n";
                     Logging(msg);
                     throw msg;
@@ -97,16 +97,16 @@ async function executeBf(src) {
             case "[":
                 let start = i;
                 let end = i;
-                let depth=1;
-                while (depth!=0){
-                    end+=1;
-                    if(src[end]=="]"){
-                        depth-=1;
+                let depth = 1;
+                while (depth != 0) {
+                    end += 1;
+                    if (src[end] == "]") {
+                        depth -= 1;
                     }
-                    if(src[end]=="["){
-                        depth+=1;
+                    if (src[end] == "[") {
+                        depth += 1;
                     }
-                    if(src[end]==undefined){
+                    if (src[end] == undefined) {
                         break;
                     }
                 }
@@ -128,6 +128,8 @@ async function executeBf(src) {
                 let a = String.fromCharCode(memory[pointer])
                 Logging(a)
                 break;
+            case "?": // force return
+                throw Error("force return using '?'");
             default: break;
         }
         await sleep($("#delay").val());
@@ -167,19 +169,25 @@ $(function () {
             memorys[i].innerHTML = "0";
         }
         pointer = 0;
-        executeBf($("#editor").val());
+        try {
+            executeBf($("#editor").val());
+        } catch (error) {
+            Logging("exception ");
+            Logging(error.toString());
+            Logging("\n");
+        }
     });
-    $("#btn_add").on("click",()=>{
-        let elem=$("<memory>").html("0");
+    $("#btn_add").on("click", () => {
+        let elem = $("<memory>").html("0");
         memory.push(0);
         $(".memory").append(elem);
-        memorys=memorys.add(elem);
+        memorys = memorys.add(elem);
         $("#current_memsize").html(memory.length)
     })
-    $("#btn_sub").on("click",()=>{
+    $("#btn_sub").on("click", () => {
         memory.pop();
         $(".memory").children().last().remove();
-        memorys=$(".memory").children();
+        memorys = $(".memory").children();
         $("#current_memsize").html(memory.length)
     })
 })

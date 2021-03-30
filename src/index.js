@@ -80,18 +80,14 @@ async function executeBf(src) {
                 pointer -= 1;
                 setMemoryCursor(pointer);
                 if (pointer == -1) {
-                    let msg = "pointer less 0(underflow)\n";
-                    Logging(msg);
-                    throw msg;
+                    throw Error("pointer underflow\n");
                 }
                 break;
             case ">":
                 pointer += 1;
                 setMemoryCursor(pointer);
                 if (pointer > memory.length - 1) {
-                    let msg = "pointer greater 19(underflow)\n";
-                    Logging(msg);
-                    throw msg;
+                    throw Error("pointer overflow\n");
                 }
                 break;
             case "[":

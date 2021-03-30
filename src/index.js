@@ -163,7 +163,7 @@ $(function () {
         for (let i = 0; i < memory.length; i++) {
             memory[i] = 0;
             memorys[i].innerHTML = "0";
-        }
+    $("#btn_run").on("click", async () => {
         pointer = 0;
         try {
             executeBf($("#editor").val());

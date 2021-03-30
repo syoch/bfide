@@ -159,14 +159,14 @@ $(function () {
         }, 10);
     }, 0);
     // html handler
-    $("#btn_run").on("click", () => {
+    $("#btn_run").on("click", async () => {
         for (let i = 0; i < memory.length; i++) {
             memory[i] = 0;
             memorys[i].innerHTML = "0";
-    $("#btn_run").on("click", async () => {
+        }
         pointer = 0;
         try {
-            executeBf($("#editor").val());
+            await executeBf($("#editor").val());
         } catch (error) {
             Logging("exception ");
             Logging(error.toString());

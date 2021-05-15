@@ -186,4 +186,7 @@ $(function () {
         memorys = $(".memory").children();
         $("#current_memsize").html(memory.length)
     })
+    $("#clear").on("click", () => {
+        $(".log").html("");
+    });
 })
